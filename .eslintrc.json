@@ -22,7 +22,6 @@
     ],
     "rules": {
         "prettier/prettier": [
-            "warn",
             {
                 "endOfLine": "auto",
                 "tabWidth": 4
