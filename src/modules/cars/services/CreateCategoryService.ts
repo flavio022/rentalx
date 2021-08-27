@@ -11,7 +11,7 @@ class CreateCategoryService {
         this.categoryRepository = categoryRepository;
     }
     execute({ description, name }: IRequest): void {
-        const categoryAlredyExist = this.categoryRepository.find(name);
+        const categoryAlredyExist = this.categoryRepository.findByName(name);
 
         if (categoryAlredyExist) {
             throw new Error("Category alredy exists!");
