@@ -20,7 +20,7 @@ class CategoryRepository implements ICategoryRepository {
         return this.categories;
     }
 
-    find(name: string): Category | undefined {
+    findByName(name: string): Category | undefined {
         const category = this.categories.find((category) => category.name === name);
         return category;
     }
