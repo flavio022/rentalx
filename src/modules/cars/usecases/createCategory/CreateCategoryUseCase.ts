@@ -12,14 +12,17 @@ class CreateCategoryUseCase {
         private categoryRepository: ICategoryRepository
     ) { }
 
-    async execute({ description, name }: IRequest): Promise<void> {
-        const categoryAlredyExist = await this.categoryRepository.findByName(name);
 
-        if (categoryAlredyExist) {
-            throw new Error("Category alredy exists!");
+    async execute({ name, description }: IRequest): Promise<void> {
+        const categoryAlreadyExists = await this.categoryRepository.findByName(
+            name
+        );
+
+        if (categoryAlreadyExists) {
+            throw new Error("Category already exist!");
         }
 
-        this.categoryRepository.create({ name, description });
+        await this.categoryRepository.create({ name, description });
     }
 
 }
