@@ -3,6 +3,7 @@ import { Category } from "../../entities/Category";
 import { ICategoryRepository, ICreateCategoryDTO } from "../ICategoryRepository";
 
 class CategoryRepository implements ICategoryRepository {
+
     private repository: Repository<Category>;
 
     constructor() {
