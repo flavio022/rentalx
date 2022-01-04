@@ -28,6 +28,9 @@ export async function ensureAuthetnticated(
         if (!user) {
             throw new AppError("User does not exists!", 401);
         }
+        request.user = {
+            id: user.id,
+        };
 
         next();
 
