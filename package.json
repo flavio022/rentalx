@@ -5,21 +5,25 @@
   "main": "index.js",
   "scripts": {
     "dev": "ts-node-dev --inspect --transpile-only src/server.ts --ignore-watch node_modules --respawn src/server.ts",
-    "typeorm": "ts-node-dev ./node_modules/typeorm/cli"
+    "typeorm": "ts-node-dev ./node_modules/typeorm/cli",
+    "test": "jest"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@types/jest": "^29.2.0",
     "@types/jsonwebtoken": "^8.5.6",
     "bcryptjs": "^2.4.3",
     "csv-parse": "^4.16.3",
     "express": "^4.17.1",
     "express-async-errors": "^3.1.1",
+    "jest": "^29.2.2",
     "jsonwebtoken": "^8.5.1",
     "multer": "^1.4.3",
     "nodemon": "^2.0.12",
     "pg": "^8.7.1",
     "reflect-metadata": "^0.1.13",
+    "ts-jest": "^29.0.3",
     "tsyringe": "^4.6.0",
     "typeorm": "^0.2.38",
     "uuid": "^8.3.2",
